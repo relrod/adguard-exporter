@@ -112,6 +112,9 @@ scrape_configs:
 # Hostname of the Raspberry PI where Adguard is installed
 -adguard_hostname string (optional) (default "127.0.0.1")
 
+# Custom port for the Adguard API
+-adguard_port string (optional) (default "", becomes 80 if protocol is http, or 443 if https)
+
 # Username to login to Adguard Home
 -adguard_username string (optional)
 

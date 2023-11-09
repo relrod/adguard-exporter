@@ -1,4 +1,5 @@
 vendor
 debug
 adguard_exporter
+adguard-exporter
 .git/

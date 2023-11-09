@@ -30,27 +30,43 @@ type Client struct {
 	logLimit   string
 	protocol   string
 	hostname   string
-	port       uint16
+	port       int
 	username   string
 	password   string
 }
 
 // NewClient method initializes a new AdGuard  client.
-func NewClient(protocol, hostname string, username, password string, interval time.Duration, logLimit string) *Client {
+func NewClient(protocol, hostname string, port string, username, password string, interval time.Duration, logLimit string) *Client {
 	if protocol != "http" && protocol != "https" {
 		log.Printf("protocol %s is invalid. Must be http or https.", protocol)
 		os.Exit(1)
 	}
 
-	port = 80
-	if protocol == "https" {
-		port = 443
+	var p int
+
+	if port == "" {
+		if protocol == "http" {
+			p = 80
+		} else if protocol == "https" {
+			p = 443
+		}
+	} else {
+		var err error
+		p, err = strconv.Atoi(port)
+		if err != nil {
+			log.Printf("port %s is invalid. Must be a number.", port)
+			os.Exit(1)
+		}
+		if p < 1 || p > 65535 {
+			log.Printf("port %s is invalid. Must be between 1 and 65535.", port)
+			os.Exit(1)
+		}
 	}
 
 	return &Client{
 		protocol: protocol,
 		hostname: hostname,
-		port:     port,
+		port:     p,
 		username: username,
 		password: password,
 		interval: interval,
