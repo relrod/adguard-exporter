@@ -1,4 +1,4 @@
-FROM golang:1-alpine
+FROM --platform=linux/arm64,linux/amd64 golang:1-alpine
 
 WORKDIR /usr/src/app
 
