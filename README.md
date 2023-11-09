@@ -1,14 +1,14 @@
 # AdguardHome Prometheus Exporter
 
-[![GoDoc](https://godoc.org/github.com/ebrianne/adguard-exporter?status.png)](https://godoc.org/github.com/ebrianne/adguard-exporter)
-[![GoReportCard](https://goreportcard.com/badge/github.com/ebrianne/adguard-exporter)](https://goreportcard.com/report/github.com/ebrianne/adguard-exporter)
+[![GoDoc](https://godoc.org/github.com/relrod/adguard-exporter?status.png)](https://godoc.org/github.com/relrod/adguard-exporter)
+[![GoReportCard](https://goreportcard.com/badge/github.com/relrod/adguard-exporter)](https://goreportcard.com/report/github.com/relrod/adguard-exporter)
 
 This is a Prometheus exporter for [AdguardHome](https://github.com/AdguardTeam/AdguardHome)'s Raspberry PI ad blocker.
 It is based on the famous pihole-exporter [available here](https://github.com/eko/pihole-exporter/)
 
-![Grafana dashboard](https://raw.githubusercontent.com/ebrianne/adguard-exporter/master/grafana/dashboard.png)
+![Grafana dashboard](https://raw.githubusercontent.com/relrod/adguard-exporter/master/grafana/dashboard.png)
 
-Grafana dashboard is [available here](https://grafana.com/dashboards/13330) on the Grafana dashboard website and also [here](https://raw.githubusercontent.com/ebrianne/adguard-exporter/master/grafana/dashboard.json) on the GitHub repository.
+Grafana dashboard is [available here](https://grafana.com/dashboards/13330) on the Grafana dashboard website and also [here](https://raw.githubusercontent.com/relrod/adguard-exporter/master/grafana/dashboard.json) on the GitHub repository.
 
 ## Prerequisites
 
@@ -21,26 +21,26 @@ Grafana dashboard is [available here](https://grafana.com/dashboards/13330) on t
 You can download the latest version of the binary built for your architecture here:
 
 * Architecture **i386** [
-[Darwin](https://github.com/ebrianne/adguard-exporter/releases/latest/download/adguard_exporter-darwin-386) /
-[Linux](https://github.com/ebrianne/adguard-exporter/releases/latest/download/adguard_exporter-linux-386) /
-[Windows](https://github.com/ebrianne/adguard-exporter/releases/latest/download/adguard_exporter-windows-386.exe)
+[Darwin](https://github.com/relrod/adguard-exporter/releases/latest/download/adguard_exporter-darwin-386) /
+[Linux](https://github.com/relrod/adguard-exporter/releases/latest/download/adguard_exporter-linux-386) /
+[Windows](https://github.com/relrod/adguard-exporter/releases/latest/download/adguard_exporter-windows-386.exe)
 ]
 * Architecture **amd64** [
-[Darwin](https://github.com/ebrianne/adguard-exporter/releases/latest/download/adguard_exporter-darwin-amd64) /
-[Linux](https://github.com/ebrianne/adguard-exporter/releases/latest/download/adguard_exporter-linux-amd64) /
-[Windows](https://github.com/ebrianne/adguard-exporter/releases/latest/download/adguard_exporter-windows-amd64.exe)
+[Darwin](https://github.com/relrod/adguard-exporter/releases/latest/download/adguard_exporter-darwin-amd64) /
+[Linux](https://github.com/relrod/adguard-exporter/releases/latest/download/adguard_exporter-linux-amd64) /
+[Windows](https://github.com/relrod/adguard-exporter/releases/latest/download/adguard_exporter-windows-amd64.exe)
 ]
 * Architecture **arm** [
-[Linux](https://github.com/ebrianne/adguard-exporter/releases/latest/download/adguard_exporter-linux-arm)
+[Linux](https://github.com/relrod/adguard-exporter/releases/latest/download/adguard_exporter-linux-arm)
 ]
 
 ### From sources
 
 Optionally, you can download and build it from the sources. You have to retrieve the project sources by using one of the following way:
 ```bash
-$ go get -u github.com/ebrianne/adguard-exporter
+$ go get -u github.com/relrod/adguard-exporter
 # or
-$ git clone https://github.com/ebrianne/adguard-exporter.git
+$ git clone https://github.com/relrod/adguard-exporter.git
 ```
 
 Install the needed vendors:

@@ -1,4 +1,4 @@
-module github.com/ebrianne/adguard-exporter
+module github.com/relrod/adguard-exporter
 
 go 1.14
 

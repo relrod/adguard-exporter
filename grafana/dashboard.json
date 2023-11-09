@@ -60,7 +60,7 @@
       }
     ]
   },
-  "description": "This is a Adguard dashboard when using the https://github.com/ebrianne/adguard-exporter Prometheus exporter",
+  "description": "This is a Adguard dashboard when using the https://github.com/relrod/adguard-exporter Prometheus exporter",
   "editable": true,
   "gnetId": 10176,
   "graphTooltip": 0,

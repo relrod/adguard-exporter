@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ebrianne/adguard-exporter/internal/metrics"
+	"github.com/relrod/adguard-exporter/internal/metrics"
 	"github.com/mitchellh/mapstructure"
 )
 

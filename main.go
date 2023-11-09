@@ -7,10 +7,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/ebrianne/adguard-exporter/config"
-	"github.com/ebrianne/adguard-exporter/internal/adguard"
-	"github.com/ebrianne/adguard-exporter/internal/metrics"
-	"github.com/ebrianne/adguard-exporter/internal/server"
+	"github.com/relrod/adguard-exporter/config"
+	"github.com/relrod/adguard-exporter/internal/adguard"
+	"github.com/relrod/adguard-exporter/internal/metrics"
+	"github.com/relrod/adguard-exporter/internal/server"
 )
 
 const (
