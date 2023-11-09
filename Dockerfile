@@ -10,3 +10,7 @@ RUN go build -o /usr/bin/adguard-exporter && \
 EXPOSE 9162
 
 CMD ["/usr/bin/adguard-exporter"]
+
+WORKDIR /
+
+USER 1000
