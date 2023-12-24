@@ -1,11 +1,18 @@
-FROM golang:1-alpine
+FROM golang:1-alpine as build
 
-WORKDIR /usr/src/app
+WORKDIR /build
 
-COPY . .
+COPY go.mod go.sum /build/
 
-RUN go build -o /usr/bin/adguard-exporter && \
-    rm -rf /usr/src/app
+RUN go mod download
+
+COPY . /build
+
+RUN CGO_ENABLED=0 go build -o adguard-exporter .
+
+FROM gcr.io/distroless/static-debian12
+
+COPY --from=build /build/adguard-exporter /usr/bin/adguard-exporter
 
 EXPOSE 9162
 
